@@ -1,0 +1,157 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Стили для навигации, смещаем меню влево */
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.navbar ul li {
+    margin: 20px 0;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 24px;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #00aaff; /* Цвет при наведении */
+}
+
+/* Главная секция */
+.hero {
+    background-image: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Новые стили для кнопок */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #00aaff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    background-color: #0066cc;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для секций */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.schedule-section {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.tickets-section {
+    background-color: #f1f1f1;
+}
+
+.reviews-section {
+    background-color: #e9f7ff;
+}
+
+.faq-section {
+    background-color: #f1f1f1;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.schedule-list, .faq-item {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* Стили отзывов */
+blockquote {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 5px solid #00aaff;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+blockquote i {
+    color: #00aaff;
+}
+
+/* Разделители */
+.section-divider {
+    border: 2px solid #00aaff;
+    margin: 40px 0;
+}

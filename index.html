@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars in Graz</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигационное меню смещено влево -->
+    <nav class="navbar">
+        <ul>
+            <!-- Оставляем только иконки, убираем текст -->
+            <li><a href="#home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#schedule"><i class="fas fa-calendar-alt"></i></a></li>
+            <li><a href="#tickets"><i class="fas fa-ticket-alt"></i></a></li>
+            <li><a href="#reviews"><i class="fas fa-comments"></i></a></li>
+            <li><a href="#faq"><i class="fas fa-question-circle"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Stars in Graz</h1>
+            <p>Ждем вас на грандиозном событии</p>
+            <!-- Кнопки на главной странице -->
+            <div class="hero-buttons">
+                <a href="#tickets" class="btn-secondary">Купить билеты</a>
+                <a href="#reviews" class="btn-primary">Читать отзывы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Разделитель -->
+    <hr class="section-divider">
+
+    <!-- Секция с расписанием -->
+    <section id="schedule" class="section schedule-section">
+        <h2>Расписание событий</h2>
+        <ul class="schedule-list">
+            <li><strong>30 ноября:</strong> Stars in Graz — Гала-концерт</li>
+            <li><strong>1 декабря:</strong> Заключительный вечер</li>
+            <li><strong>2 декабря:</strong> Финальное шоу</li>
+        </ul>
+    </section>
+
+    <!-- Разделитель -->
+    <hr class="section-divider">
+
+    <!-- Секция с билетами -->
+    <section id="tickets" class="section tickets-section">
+        <h2>Билеты</h2>
+        <p>Билеты доступны с 19 ноября. Поторопитесь!</p>
+    </br>
+        <div class="tickets-buttons">
+            <a href="#tickets" class="btn-primary">Забронировать</a>
+        </div>
+    </section>
+
+    <!-- Разделитель -->
+    <hr class="section-divider">
+
+    <!-- Секция отзывов -->
+    <section id="reviews" class="section reviews-section">
+        <h2>Отзывы участников</h2>
+        <blockquote>
+            <i class="fas fa-quote-left"></i>
+            "Это было что-то невероятное!" — Анна, прошлый год
+            <i class="fas fa-quote-right"></i>
+        </blockquote>
+        <blockquote>
+            <i class="fas fa-quote-left"></i>
+            "Потрясающая организация!" — Иван, прошлый год
+            <i class="fas fa-quote-right"></i>
+        </blockquote>
+    </section>
+
+    <!-- Разделитель -->
+    <hr class="section-divider">
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq-section">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <i class="fas fa-question-circle"></i>
+            <h4>Когда начнется концерт?</h4>
+            <p>Концерт начинается в 19:00.</p>
+        </div>
+        <div class="faq-item">
+            <i class="fas fa-question-circle"></i>
+            <h4>Как приобрести билеты?</h4>
+            <p>Билеты можно купить онлайн на нашем сайте.</p>
+        </div>
+    </section>
+
+    <!-- Скрипт для плавной прокрутки -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const offset = (window.innerHeight - targetElement.offsetHeight) / 2;
+                window.scrollTo({
+                    top: targetElement.getBoundingClientRect().top + window.pageYOffset - offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
